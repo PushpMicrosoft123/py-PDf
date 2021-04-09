@@ -54,6 +54,8 @@ Since you've a complete authority on how and where py-PDf should be deployed, yo
  Pushpdeep Gupta (pushpdeepamity@gmail.com)
  Git Username: https://github.com/PushpMicrosoft123
 
+# Contribution
+ Currently, source code is not publicly available. To contribute please drop an email to pushpdeepamity@gmail.com.
 # Version History
 - 1.0 Initial release
 
