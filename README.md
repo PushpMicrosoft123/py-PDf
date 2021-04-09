@@ -18,7 +18,25 @@ You might need to endure Infra cost for hosting the API.
 Since you've a complete authority on how and where py-PDf should be deployed, you can always host it in your nearest data center(region) to reduce the network latency and provide fastest response to your application consumers.
 
 # Understanding API endpoints:
-
+- {your-endpoint}/test
+ Get method to test if server is running. No Request payload is required
+ **Returns** the positive response with 200.
+- {your-endpoint}/add-watermark
+ This Post method adds watermark to the uploaded PDF. Methods requires two form-data values as inout:
+ 1. oFile: PDF file that needs to be watermarked
+ 2. wFile: A watermark pdf file to be used as a watermark.
+ **Returns** the final PDF as stream object.
+- {your-endpoint}/convert-to-pdf
+ This POST method converts Microsft word document to PDF.
+ Methods requires one form-data input:
+ 1. file: file with doc/docx extension.
+**Returns** the converted PDF as stream object
+- {your-endpoint}/merge-pdfs
+- Post method provides cosumers to merge their PDFs into single file. It loads files directly from blob. Method requires list of PDF blob Uris in to be merged into single PDF.
+ **Sample: ** {
+    "url_list": ["PDF_Blob_URI_WithAccessToken1", "PDF_Blob_URI_WithAccessToken2"]
+}
+**Returns** the final PDF as stream object.
 # Installing
 
 #### Local Machine Set Up
@@ -27,7 +45,7 @@ Since you've a complete authority on how and where py-PDf should be deployed, yo
 
 # Dependencies
 - Docker v20.x
-- Linux containers
+- Linux container
 
 # Author
  Pushpdeep Gupta (pushpdeepamity@gmail.com)
