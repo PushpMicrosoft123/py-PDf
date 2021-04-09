@@ -23,13 +23,13 @@ Since you've a complete authority on how and where py-PDf should be deployed, yo
  **Returns** the positive response with 200.
 - {your-endpoint}/add-watermark
  This Post method adds watermark to the uploaded PDF. Methods requires two form-data values as inout:
- 1. oFile: PDF file that needs to be watermarked
- 2. wFile: A watermark pdf file to be used as a watermark.
+  1. oFile: PDF file that needs to be watermarked
+  2. wFile: A watermark pdf file to be used as a watermark.
  **Returns** the final PDF as stream object.
 - {your-endpoint}/convert-to-pdf
  This POST method converts Microsft word document to PDF.
  Methods requires one form-data input:
- 1. file: file with doc/docx extension.
+  1. file: file with doc/docx extension.
 **Returns** the converted PDF as stream object
 - {your-endpoint}/merge-pdfs
  Post method provides cosumers to merge their PDFs into single file. It loads files directly from blob. Method requires list of PDF blob Uris in to be merged into single PDF.
