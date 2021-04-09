@@ -44,6 +44,8 @@ Since you've a complete authority on how and where py-PDf should be deployed, yo
 
 #### Azure Web App in Linux Deployment
 
+#### Deploy to Kubernetes
+
 # Dependencies
 - Docker v20.x
 - Linux container
