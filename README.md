@@ -18,6 +18,7 @@ You might need to endure Infra cost for hosting the API.
 Since you've a complete authority on how and where py-PDf should be deployed, you can always host it in your nearest data center(region) to reduce the network latency and provide fastest response to your application consumers.
 
 # Understanding API endpoints:
+ With the initial release 1.0 py-PDf exposes 4 endpoints for testing, watermarking, merging and converting docs to PDF.
 - {your-endpoint}/test
  Get method to test if server is running. No Request payload is required
  **Returns** the positive response with 200.
