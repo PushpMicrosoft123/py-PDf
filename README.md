@@ -32,7 +32,7 @@ Since you've a complete authority on how and where py-PDf should be deployed, yo
  1. file: file with doc/docx extension.
 **Returns** the converted PDF as stream object
 - {your-endpoint}/merge-pdfs
-- Post method provides cosumers to merge their PDFs into single file. It loads files directly from blob. Method requires list of PDF blob Uris in to be merged into single PDF.
+ Post method provides cosumers to merge their PDFs into single file. It loads files directly from blob. Method requires list of PDF blob Uris in to be merged into single PDF.
  **Sample: ** {
     "url_list": ["PDF_Blob_URI_WithAccessToken1", "PDF_Blob_URI_WithAccessToken2"]
 }
