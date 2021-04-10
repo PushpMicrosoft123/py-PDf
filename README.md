@@ -47,15 +47,38 @@ Please note py-PDf exposes port 8083 from container, you can map your machine's 
 
 #### Local Machine Set Up
  - Make sure docker is installed on your machine, you can follow the download instructions [here](https://docs.docker.com/get-docker/)
- - Run docker run -dit -p 8083:8083 pushpdeep123456/py-nin-pdf:1.0
+ - Run $ docker run -dit -p 8083:8083 pushpdeep123456/py-nin-pdf:1.0 . This will deploy the docker containe using image.
  - Hit URL : http://localhost:8083/test. You must get success acknowledgement :
  {
     "data": "Your server is up and running."
  }
  - API is ready to serve your requests.
-#### Azure Web App in Linux Deployment
+#### Python app deployment with Azure Web App for Linux
+Make sure you have a valid Azur subscription:
+Please follow below steps:
+ 1. Create a Web App resource:
 
-#### Deploy to Kubernetes
+    ![image](https://user-images.githubusercontent.com/45087848/114273519-f210d400-9a37-11eb-84b2-d55758bfd070.png)
+ 2. Provide basic information. Make sure you enable Docker Container:
+ 
+    ![image](https://user-images.githubusercontent.com/45087848/114273687-af9bc700-9a38-11eb-82b7-aac9d1ca2397.png)
+ 3. Fill the Docker deatils as below:
+ 
+    ![image](https://user-images.githubusercontent.com/45087848/114273738-ee318180-9a38-11eb-93c7-0c83306d2a1e.png)
+ 4. Create App:
+ 
+    ![image](https://user-images.githubusercontent.com/45087848/114273831-49637400-9a39-11eb-8c13-9964366cfc5e.png) 
+ 5. App service will create a continer using py-PDf image:
+ 
+ 6. Set WEBSITES_PORT as 8083 as shown below:
+ 
+    ![image](https://user-images.githubusercontent.com/45087848/114274001-1d94be00-9a3a-11eb-9d53-86a36992a645.png)
+ 7. Access API using app service URL field:
+ 
+    ![image](https://user-images.githubusercontent.com/45087848/114274091-73696600-9a3a-11eb-9e5d-9a846f53f0e5.png)
+
+#### Deploy on Kubernetes
+Please follow steps [here](https://docs.docker.com/desktop/kubernetes/)
 
 # Dependencies
 - Docker v20.x
