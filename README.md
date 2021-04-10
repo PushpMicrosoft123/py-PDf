@@ -68,7 +68,7 @@ Please follow below steps:
  4. Create App:
  
     ![image](https://user-images.githubusercontent.com/45087848/114273831-49637400-9a39-11eb-8c13-9964366cfc5e.png) 
- 5. App service will create a continer using py-PDf image:
+ 5. App service will instantiate a Linux continer using py-PDf image:
  
  6. Set WEBSITES_PORT as 8083 as shown below:
  
