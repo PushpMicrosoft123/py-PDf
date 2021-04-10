@@ -43,9 +43,16 @@ Since you've a complete authority on how and where py-PDf should be deployed, yo
   https://hub.docker.com/repository/docker/pushpdeep123456/py-nin-pdf
   or use command 
 # Installing
+Please note py-PDf exposes port 8083 from container, you can map your machine's port to hit the containers API as mentionned in local machine setup.
 
 #### Local Machine Set Up
-
+ - Make sure docker is installed on your machine, you can follow the dowanload instructions [here]()
+ - Run docker run -dit -p 8083:8083 pushpdeep123456/py-nin-pdf:1.0
+ - Hit URL : http://localhost:8083/test. You must get below success acknowledgement :
+ {
+    "data": "Your server is up and running."
+ }
+ - You API is ready to server your requests.
 #### Azure Web App in Linux Deployment
 
 #### Deploy to Kubernetes
