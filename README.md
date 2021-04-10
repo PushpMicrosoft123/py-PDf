@@ -8,7 +8,7 @@ Since library comes as a docker image, it can be hosted on your local platform o
 #### Easy and Fast Deployment Model
 py-Pdf is easily available from Docker hub. Hence DevOps pipelines can pull the image directly and spin up the containers in feww seconds. 
 #### Control On Infra Scaling
-You can spin up as many continers (pods in case of Kubernetes) as possile based on Node comuting size.
+You can spin up as many py-PDf continers as possile based on nodes availability or compute size.
 #### Data Security
 py-PDf doesn't store any data sent by consumers. It doesn't have any persistant storage and works in complete isolation; it is deployed in your own Infra/Cloud Subscription so that you have a better control on memory and CPU utilization.
 #### Free PDF operations
