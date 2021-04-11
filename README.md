@@ -97,7 +97,7 @@ Please follow steps [here](https://docs.docker.com/desktop/kubernetes/)
  Currently, source code is not publicly available. To contribute please drop an email to pushpdeepamity@gmail.com.
 # Version History
 - 1.0 Initial release
-- 1.0.1 Added capbility of merging pdf files coming in request form-data.
+- 1.0.1 Added capability of merging pdf files coming in request form-data.
 
 # License
 This project is licensed under the [MIT LICENSE](https://choosealicense.com/licenses/mit/)
