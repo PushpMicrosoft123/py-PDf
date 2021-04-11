@@ -41,7 +41,9 @@ py-PDf provides all capabilities in the form of exposed APIs. Hence, it can easi
     "url_list": ["PDF_Blob_URI_WithAccessToken1", "PDF_Blob_URI_WithAccessToken2"]
 }
 **Returns** the final PDF as stream object.
-
+- {your-endpoint}//merge-streams-pdf
+ Post method merge PDF streams into single PDF file. The previous merge method reads pdfs from Blobs where as this method supports posting PDF files directly to server with payload. send multiple pdf files for merging in request form-data.
+ **Returns** Merged PDF as stream object.
 # Download From Docker Hub
   https://hub.docker.com/repository/docker/pushpdeep123456/py-nin-pdf
   or use command $ docker pull pushpdeep123456/py-nin-pdf:1.0
@@ -95,6 +97,7 @@ Please follow steps [here](https://docs.docker.com/desktop/kubernetes/)
  Currently, source code is not publicly available. To contribute please drop an email to pushpdeepamity@gmail.com.
 # Version History
 - 1.0 Initial release
+- 1.0.1 Added capbility of merging pdf files coming in request form-data.
 
 # License
 This project is licensed under the [MIT LICENSE](https://choosealicense.com/licenses/mit/)
