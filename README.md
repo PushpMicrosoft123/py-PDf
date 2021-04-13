@@ -3,52 +3,65 @@ py-PDf is a pure-python based library that exposes API endpoints to perform vari
 
 # Description
 py-PDf is a fast and robust library written in python. It exposes various endpoints to PDF operations. py-PDf comes as a docker image and can be provides rest apis as containerized app, that allows it to easily deployed in linux containers system like Kubernetes or Azure Web app on Linux. 
+
 #### Infra flexibility
 Since library comes as a docker image, it can be hosted on your local platform or any other public cloud such as AWS or Azure. 
+
 #### Easy and Fast Deployment Model
 py-Pdf is easily available from Docker hub. Hence DevOps pipelines can pull the image directly and spin up the containers in feww seconds. 
-#### Control On Infra Scaling
+
+#### Control On Infra Scaling/ No of containers
 You can spin up as many py-PDf continers as possile based on nodes availability or compute size.
+
 #### Data Security
 py-PDf doesn't store any data sent by consumers. It doesn't have any persistant storage and works in complete isolation; it is deployed in your own Infra/Cloud Subscription so that you have a better control on memory and CPU utilization.
+
 #### Free PDF operations
 There is no limitation on number of transactions with API. Since it is based on open source libraries, you can develop as many PDF as you want with almost zero operational cost.
 You might need to endure Infra cost for hosting the API.
+
 #### Fast response and less netwrok latency
 Since you've a complete authority on how and where py-PDf should be deployed, you can always host it in your nearest data center(region) to reduce the network latency and provide fastest response to your application consumers.
 
 #### Smooth Integration
-py-PDf provides all capabilities in the form of exposed APIs. Hence, it can easily be integrated with any application irrespective of which language they have implemented with. All we have to do is to call http endpoints to get service.
+py-PDf provides all the capabilities in the form of exposed APIs. Hence, it can easily be integrated with any application irrespective of the language they have implemented with. They are just required to call endpoints to avail the services.
 
 # Understanding API endpoints:
  With the initial release 1.0 py-PDf exposes 4 endpoints for testing, watermarking, merging and converting docs to PDF.
-- {your-endpoint}/test
+
+- **{your-endpoint}/test**
  Get method to test if server is running. No Request payload is required
  **Returns** the positive response with 200.
-- {your-endpoint}/add-watermark
+
+- **{your-endpoint}/add-watermark**
  This Post method adds watermark to the uploaded PDF. Methods requires two form-data values as inout:
   1. oFile: PDF file that needs to be watermarked
   2. wFile: A watermark pdf file to be used as a watermark.
   **Returns** the watermarked PDF as stream object.
-- {your-endpoint}/add-text-watermark
+
+- **{your-endpoint}/add-text-watermark**
    This endpoint is capable of addig watermark as background text. Send watermark text of your choice not exceeding 20 characters. Parameters:
    1. wm_text: watermark text as part of form-data.
    2. file: a pdf file to be watermarked, send it as part of form-data.
  **Returns** the watermarked pdf as stream object.
-- {your-endpoint}/convert-to-pdf
+
+- **{your-endpoint}/convert-to-pdf**
  This POST method converts Microsft word document to PDF.
  Methods requires one form-data input:
   1. file: file with doc/docx extension.
 **Returns** the converted PDF as stream object
-- {your-endpoint}/merge-pdfs
+
+- **{your-endpoint}/merge-pdfs**
  Post method provides cosumers to merge their PDFs into single file. It loads files directly from blob. Method requires list of PDF blob Uris in to be merged into single PDF.
  **Sample: ** {
     "url_list": ["PDF_Blob_URI_WithAccessToken1", "PDF_Blob_URI_WithAccessToken2"]
 }
 **Returns** the final PDF as stream object.
-- {your-endpoint}//merge-streams-pdf
+
+- **{your-endpoint}//merge-streams-pdf**
  Post method merge PDF streams into single PDF file. The previous merge method reads pdfs from Blobs where as this method supports posting PDF files directly to server with payload. send multiple pdf files for merging in request form-data.
  **Returns** Merged PDF as stream object.
+ 
 # Download From Docker Hub
   https://hub.docker.com/repository/docker/pushpdeep123456/py-nin-pdf
   or use command $ docker pull pushpdeep123456/py-nin-pdf:1.0
