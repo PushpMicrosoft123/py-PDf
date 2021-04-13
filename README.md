@@ -81,6 +81,7 @@ Please note py-PDf exposes port 8083 from container, you can map your machine's 
 This service can be hosted on a Linux continer by downloading latest image from docker hub/registry.
 1. Please see Microsoft documentation on how to deploy Containerized app on Linux containers
 2. Please see Microsoft docs on how to deploy docker image on AKS (Azure kubernetes services)
+**Please note: App exposes port no 8083 inside the container. To access APIs, you can map this port to any available port on your hosting machine.**
 
 # Dependencies
 - Docker v20.x
