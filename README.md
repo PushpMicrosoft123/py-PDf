@@ -2,10 +2,10 @@
 py-PDf is a pure-python based library that exposes API endpoints to perform various PDF operations such as splitting, merging together, watermarking, converting Microsoft docs to PDFs. It can also add password to PDF files.
 
 # Description
-py-PDf is a fast and robust library written in python. It exposes various endpoints to PDF operations. py-PDf comes as a docker image and can be provides rest apis as containerized app, that allows it to easily deployed in linux containers system like Kubernetes or Azure Web app on Linux. 
+py-PDf is a fast and robust library written in pure python. It exposes several endpoints to perform PDF operations. py-PDf comes as a docker image and can be hosted as a containerized rest api on linux containers supported by your local desktop, Kubernetes, Azure Web app and various app hosting environments on public clouds. 
 
 #### Infra flexibility
-Since library comes as a docker image, it can be hosted on your local platform or any other public cloud such as AWS or Azure. 
+Since library comes as a docker image, it can easily be hosted on linux containers supported by local platform or any other public cloud such as AWS or Azure.
 
 #### Easy and Fast Deployment Model
 py-Pdf is easily available from Docker hub. Hence DevOps pipelines can pull the image directly and spin up the containers in feww seconds. 
@@ -16,11 +16,11 @@ You can spin up as many py-PDf continers as possile based on nodes availability 
 #### Data Security
 py-PDf doesn't store any data sent by consumers. It doesn't have any persistant storage and works in complete isolation; it is deployed in your own Infra/Cloud Subscription so that you have a better control on memory and CPU utilization.
 
-#### Free PDF operations
+#### Unlimited PDF operations
 There is no limitation on number of transactions with API. Since it is based on open source libraries, you can develop as many PDF as you want with almost zero operational cost.
 You might need to endure Infra cost for hosting the API.
 
-#### Fast response and less netwrok latency
+#### Fast response and less network latency
 Since you've a complete authority on how and where py-PDf should be deployed, you can always host it in your nearest data center(region) to reduce the network latency and provide fastest response to your application consumers.
 
 #### Smooth Integration
@@ -76,32 +76,11 @@ Please note py-PDf exposes port 8083 from container, you can map your machine's 
     "data": "Your server is up and running."
  }
  - API is ready to serve your requests.
-#### Python app deployment with Azure Web App for Linux
-Make sure you have a valid Azur subscription:
-Please follow below steps:
- 1. Create a Web App resource:
 
-    ![image](https://user-images.githubusercontent.com/45087848/114273519-f210d400-9a37-11eb-84b2-d55758bfd070.png)
- 2. Provide basic information. Make sure you enable Docker Container:
- 
-    ![image](https://user-images.githubusercontent.com/45087848/114273687-af9bc700-9a38-11eb-82b7-aac9d1ca2397.png)
- 3. Fill the Docker deatils as below:
- 
-    ![image](https://user-images.githubusercontent.com/45087848/114273738-ee318180-9a38-11eb-93c7-0c83306d2a1e.png)
- 4. Create App:
- 
-    ![image](https://user-images.githubusercontent.com/45087848/114273831-49637400-9a39-11eb-8c13-9964366cfc5e.png) 
- 5. App service will instantiate a Linux continer using py-PDf image:
- 
- 6. Set WEBSITES_PORT as 8083 as shown below:
- 
-    ![image](https://user-images.githubusercontent.com/45087848/114274001-1d94be00-9a3a-11eb-9d53-86a36992a645.png)
- 7. Access API using app service URL field:
- 
-    ![image](https://user-images.githubusercontent.com/45087848/114274091-73696600-9a3a-11eb-9e5d-9a846f53f0e5.png)
-
-#### Deploy on Kubernetes
-Please follow steps [here](https://docs.docker.com/desktop/kubernetes/)
+#### py-PDf deployment on cloud
+This service can be hosted on a Linux continer by downloading latest image from docker hub/registry.
+1. Please see Microsoft documentation on how to deploy Containerized app on Linux containers
+2. Please see Microsoft docs on how to deploy docker image on AKS (Azure kubernetes services)
 
 # Dependencies
 - Docker v20.x
@@ -113,6 +92,7 @@ Please follow steps [here](https://docs.docker.com/desktop/kubernetes/)
 
 # Contribution
  Currently, source code is not publicly available. To contribute please drop an email to pushpdeepamity@gmail.com.
+ 
 # Version History
 - 1.0 Initial release
 - 1.0.1 Added capability of merging pdf files coming in request form-data.
