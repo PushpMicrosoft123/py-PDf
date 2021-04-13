@@ -10,7 +10,7 @@ Since library comes as a docker image, it can be hosted on your local platform o
 #### Easy and Fast Deployment Model
 py-Pdf is easily available from Docker hub. Hence DevOps pipelines can pull the image directly and spin up the containers in feww seconds. 
 
-#### Control On Infra Scaling/ No of containers
+#### Control On Infra Scaling/ No of service containers
 You can spin up as many py-PDf continers as possile based on nodes availability or compute size.
 
 #### Data Security
