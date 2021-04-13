@@ -29,7 +29,12 @@ py-PDf provides all capabilities in the form of exposed APIs. Hence, it can easi
  This Post method adds watermark to the uploaded PDF. Methods requires two form-data values as inout:
   1. oFile: PDF file that needs to be watermarked
   2. wFile: A watermark pdf file to be used as a watermark.
- **Returns** the final PDF as stream object.
+  **Returns** the watermarked PDF as stream object.
+- {your-endpoint}/add-text-watermark
+   This endpoint is capable of addig watermark as background text. Send watermark text of your choice not exceeding 20 characters. Parameters:
+   1. wm_text: watermark text as part of form-data.
+   2. file: a pdf file to be watermarked, send it as part of form-data.
+ **Returns** the watermarked pdf as stream object.
 - {your-endpoint}/convert-to-pdf
  This POST method converts Microsft word document to PDF.
  Methods requires one form-data input:
@@ -98,6 +103,7 @@ Please follow steps [here](https://docs.docker.com/desktop/kubernetes/)
 # Version History
 - 1.0 Initial release
 - 1.0.1 Added capability of merging pdf files coming in request form-data.
+- 1.0.2 A New watermark capability. You can now add watermark as a background text for your PDFs to preseve the copyright. 
 
 # License
 This project is licensed under the [MIT LICENSE](https://choosealicense.com/licenses/mit/)
